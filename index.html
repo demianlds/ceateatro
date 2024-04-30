@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo - Artista de Teatro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre Ricardo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#trayectoria">Trayectoria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#galeria">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="sobre" class="py-5 active">
+    <div class="container text-center">
+        <h1 class="font-weight-bold">Bienvenidos a mi web</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </div>
+</section>
+
+<section id="trayectoria" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Trayectoria</h2>
+        <ul>
+            <li>Obra I</li>
+            <li>Obra II</li>
+            <li>Obra III</li>
+        </ul>
+    </div>
+</section>
+
+<section id="galeria" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Galería</h2>
+        <div class="d-flex justify-content-center">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-slide-to="0" class="active"></li>
+                    <li data-slide-to="1"></li>
+                    <li data-slide-to="2"></li>
+                </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block" src="ima-cea/burke.png" alt="Primera imagen">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="ima-cea/guapo-900.png" alt="Segunda imagen">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="ima-cea/saverio.png" alt="Tercera imagen">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="contacto" class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Contacto</h2>
+        <div class="social-media">
+            <a href="#" class="btn btn-lg mr-3"><img src="ima-cea/ig-icon.png"></a>
+            <a href="#" class="btn btn-lg mr-3"><img src="ima-cea/wsp-icon.png"></a>
+            <a href="#" class="btn btn-lg mr-3"><img src="ima-cea/fb-icon.png"></a>
+            <a href="#" id="info-btn" class="btn btn-lg mr-3"><img src="ima-cea/info-icon.png"></a>
+        </div>
+    </div>
+</section>
+
+<div id="info-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Correo electrónico: ricardopiris@example.com</p>
+        <p>Teléfono celular: 1131438588</p>
+        <p>Teléfono de linea: 4922-4925</p>
+    </div>
+</div>
+<div class="footer-container">
+    <footer class="footer">Todos los derechos reservados a Ricardo Piris</footer>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<script>
+    $(document).ready(function(){
+        // Handler para el clic en los enlaces del navbar
+        $('.nav-link').click(function(){
+            // Oculta todas las secciones
+            $('section').removeClass('active');
+            // Obtiene el ID de la sección a la que se hizo clic
+            var target = $(this).attr('href');
+            // Muestra la sección correspondiente
+            $(target).addClass('active');
+            // Desplazamiento suave a la sección
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 800);
+            return false;
+        });
+    });
+</script>
+</html>
