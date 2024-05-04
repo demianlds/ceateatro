@@ -46,10 +46,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .happy-mask {
     margin-right: 10px;
+    border: 1px solid yellow;
   }
   
   .sad-mask {
     margin-left: 10px;
+    border: 1px solid yellow;
   }
 
 .btn {
