@@ -38,6 +38,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #d4c92f;
 }
 
+.title {
+    font-weight:bold;
+}
+.text-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
 .about-container {
     display: flex;
     align-items: center;
@@ -59,8 +67,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-item img {
-    height: 300px; /* Establece la altura deseada para las imágenes */
+    height: 450px; /* Establece la altura deseada para las imágenes */
     width: auto; /* Hace que el ancho sea automático para mantener la proporción */
+    margin: auto;
 }
 
 .btn-primary {
