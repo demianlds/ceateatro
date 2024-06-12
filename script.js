@@ -12,4 +12,13 @@ document.getElementById('info-btn').addEventListener('click', function() {
             modal.style.display = 'none';
         }
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var toggler = document.querySelector('.navbar-toggler');
+        var navbarCollapse = document.querySelector('.navbar-collapse');
+    
+        toggler.addEventListener('click', function () {
+            navbarCollapse.classList.toggle('active');
+        });
+});
 });
