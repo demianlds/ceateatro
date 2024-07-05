@@ -101,6 +101,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Estilos específicos para el modal de contacto */
+#contacto .form-control {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contacto button {
+    background-color: #207703;
+    color: #fff;
+}
+
+#contacto button:hover {
+    background-color: #343a40;
+}
 
 .modal {
     display: none; /* Por defecto el modal está oculto */
@@ -171,6 +184,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .carousel-item img {
+        height: auto;
+        width: 100%;
+    }
+
     .navbar-collapse {
         display: none;
     }
@@ -192,5 +210,15 @@ h1, h2, h3, h4, h5, h6 {
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%280, 0, 0, 0.5%29" stroke-width="2" linecap="round" linejoin="round" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    }
+    
+    .carousel-control-prev-icon {
+        position: relative;
+        top: 150px;
+    }
+
+    .carousel-control-next-icon {
+        position: relative;
+        top: 150px;
     }
 }
