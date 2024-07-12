@@ -332,7 +332,7 @@
 <section id="contacto" class="py-5">
     <div class="container text-center">
         <h2 class="mb-4">Contacto</h2>
-        <form>
+        <form class="contact-form">
             <div class="form-group">
                 <input type="text" class="form-control mb-3" id="nombre" placeholder="Nombre y Apellido" required>
             </div>
@@ -391,5 +391,32 @@
             return false;
         });
     });
+</script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+
+const form = document.querySelector('.contact-form');
+
+function sendMsg(e){
+    e.preventDefault();
+    const name = document.querySelector('#nombre');
+    const email = document.querySelector('#email');
+    const phone = document.querySelector('#telefono');
+    const msg = document.querySelector('#mensaje');
+
+
+    Email.send({
+    SecureToken : "6c98ae4a-8e10-45fe-ae57-b7d3b8114f40",
+    To : 'teatrocea@gmail.com',
+    From : email.value,
+    Subject : "Contacto",
+    Body : msg.value,
+    }).then(
+    message => alert('Gracias por tu mail, estaremos en contacto a la brevedad'));
+    }
+
+    form.addEventListener('submit',sendMsg);
 </script>
 </html>
