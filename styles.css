@@ -84,7 +84,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-control-next, .carousel-control-prev{
-    width: 32%;
+    width: 15%;
+    top:235px;
 }
 
 .btn-primary {
@@ -228,5 +229,9 @@ h1, h2, h3, h4, h5, h6 {
     .carousel-control-next-icon {
         position: relative;
         top: 150px;
+    }
+
+    .carousel-control-next, .carousel-control-prev{
+        display: none;
     }
 }
