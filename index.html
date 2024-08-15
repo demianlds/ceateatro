@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar">
         <div class="container">
             <!-- Botón de hamburguesa -->
@@ -82,16 +81,17 @@
             <li>"La extraña tarde del Dr. Burke" (Director, Actor, Escenógrafo) de Ladislav Smocek, Dirección: Ricardo Piris</li>
             <li>"Perchejov Tres" (Actor) de Anton Chejov, Adaptación y Dirección: Ernesto Michel <b>(En cartel)</b></li>
             <li>Algunas participaciones en Cine como Actor: "Martin Fierro", Dirección: Leopoldo Torre Nilsson <br> "Cuando los hombres hablan de mujeres", Dirección: F.Ayala <br> "Eficiencia" (cortometraje), Dirección: E.Aguilar <br> "Fiebre Amarilla", Dirección: Javier Torre <br> "Pozo de Zorro" (Sobre guerra de Malvinas), Dirección: Miguel Mirra</li>
-            <p><a href="#galeria">Ver en Galeria</a></p>
+            <br><p><a class="nav-link show-galery" href="#galeria">Ver en Galeria</a></p>
         </ul>
         <ul>
             <h3> Talleres </h3>
-            <li>"Desbloqueo Expresivo y Actuación" Ingreso permanente, todos los niveles. Para consultar hace click <a href="/#contacto">aquí</a></li>
+            <li>"Desbloqueo Expresivo y Actuación" Ingreso permanente, todos los niveles.</li>
             <li>"Cursos especiales para bailarines de Danza Contemporanea"</li>
+            <p><a class="nav-link show-contact" href="#contacto">Para consultar hace click aquí</a></p>
         </ul>
         <ul>
             <h3> Arte Terapia </h3>
-            <li>Coordinación de Talleres de Teatro-Terapia en Hogares de Día e Instituciones Psiquiatricas. Para consultar hace click <a href="/#contacto">aquí</a></li>
+            <li>Coordinación de Talleres de Teatro-Terapia en Hogares de Día e Instituciones Psiquiatricas.<a class="nav-link show-contact" href="#contacto">Para consultar hace click aquí</a></li>
         </ul>
         <ul>
             <h3> Dramaturgía </h3>
@@ -113,7 +113,7 @@
         <ul>
             <h3> Musica </h3>
             <li>Creador de la banda: "The Boom's" en homenaje a The Beatles en la decada del 70 (Voz y Guitarra)</li>
-            <p><a href>Ver en Galeria</a></p>
+            <!-- <p><a class="nav-link show-galery" href="#galeria">Ver en Galeria</a></p> -->
         </ul>
     </div>
 </section>
@@ -255,8 +255,7 @@
                     <div class="carousel-item">
                         <p class="paragraph">Mustafa</p>
                         <img class="d-block" src="ima-cea/mustafa.jpeg">
-                        <div class="carousel-caption d-none d-md-block">
-                        </div>
+                        <div class="carousel-caption d-none d-md-block"></div>
                     </div>
                     <div class="carousel-item">
                         <p class="paragraph">Tu cuna fue un conventillo</p>
@@ -368,24 +367,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
-<script>
-    $(document).ready(function(){
-        // Handler para el clic en los enlaces del navbar
-        $('.nav-link').click(function(){
-            // Oculta todas las secciones
-            $('section').removeClass('active');
-            // Obtiene el ID de la sección a la que se hizo clic
-            var target = $(this).attr('href');
-            // Muestra la sección correspondiente
-            $(target).addClass('active');
-            // Desplazamiento suave a la sección
-            $('html, body').animate({
-                scrollTop: $(target).offset().top
-            }, 800);
-            return false;
-        });
-    });
-</script>
 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 

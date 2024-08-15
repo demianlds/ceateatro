@@ -34,6 +34,17 @@ body {
     color: #fff;
 }
 
+.show-galery {
+    position: relative;
+    bottom: 34px;
+    right: 13px;
+}
+
+.show-contact {
+    position: relative;
+    right: 32px;
+}
+
 section {
     min-height: calc(100vh - 120px); /* Mínima altura de la sección para ocupar el espacio restante de la ventana */
     display: none;

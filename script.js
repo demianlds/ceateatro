@@ -22,3 +22,26 @@ document.getElementById('info-btn').addEventListener('click', function() {
         });
 });
 });
+
+$(document).ready(function(){
+    // Handler para el clic en los enlaces del navbar
+    $('.nav-link').click(function(){
+        $('section').removeClass('active');
+        // Obtiene el ID de la sección a la que se hizo clic
+        var target = $(this).attr('href');
+        // Muestra la sección correspondiente
+        $(target).addClass('active');
+        window.history.pushState(null, '', target);
+    });
+});
+
+window.addEventListener('popstate', function(event) {
+    var activeSection = window.location.hash;
+    if (activeSection) {
+        $('section').removeClass('active');
+        $(activeSection).addClass('active');
+    }
+});
+
+
+
