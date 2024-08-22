@@ -208,6 +208,13 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
+span.close{
+    position: relative;
+    bottom: 15px;
+    right: 10px;
+    cursor: pointer;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .carousel-item img {
