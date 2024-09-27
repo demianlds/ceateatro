@@ -4,6 +4,7 @@ body {
     color: #d4c92f;
 }
 
+
 .navbar {
     background: linear-gradient(to right,red,black);
     text-align: center;
@@ -224,6 +225,7 @@ span.close{
 
     .navbar-collapse {
         display: none;
+        width: 100%;
     }
 
     .navbar-collapse.show {
