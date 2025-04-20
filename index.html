@@ -445,20 +445,20 @@
 <section id="contacto" class="py-5">
     <div class="container text-center">
         <h2 class="mb-4">Contacto</h2>
-        <form class="contact-form">
+        <form id="contactForm" action="https://formsubmit.co/0059db5a606335cb8563acb8922c14d0" method="POST">
             <div class="form-group">
-                <input type="text" class="form-control mb-3" id="nombre" placeholder="Nombre y Apellido" required>
+                <input type="text" class="form-control mb-3" id="nombre" name="Nombre y Apellido" placeholder="Nombre y Apellido" required>
             </div>
             <div class="form-group">
-                <input type="hidden" class="form-control mb-3" id="email" placeholder="Email" value="ricardopiris193@hotmail.com" required>
+                <input type="tel" class="form-control mb-3" id="telefono" name="Teléfono" placeholder="Teléfono" required>
             </div>
             <div class="form-group">
-                <input type="tel" class="form-control mb-3" id="telefono" placeholder="Teléfono" required>
-            </div>
-            <div class="form-group">
-                <textarea class="form-control mb-3" id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+                <textarea class="form-control mb-3" id="mensaje" name="Mensaje" rows="5" placeholder="Mensaje" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
+            <p id="successMessage" style="display: none; color: green; margin-top: 10px;">
+                ✅ ¡Mensaje enviado con éxito!
+            </p>
         </form>
         <br>
         <br>
@@ -487,33 +487,4 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
-
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-
-<script>
-
-const form = document.querySelector('.contact-form');
-
-function sendMsg(e){
-    e.preventDefault();
-    const name = document.querySelector('#nombre');
-    const email = document.querySelector('#email');
-    const phone = document.querySelector('#telefono');
-    const msg = document.querySelector('#mensaje');
-    const subjectLine = `Contacto: ${name.value} - ${phone.value}`;
-
-
-    Email.send({
-    SecureToken : "6c98ae4a-8e10-45fe-ae57-b7d3b8114f40",
-    To : 'ricardopiris193@hotmail.com',
-    From : email.value,
-    Subject : subjectLine,
-    Body : msg.value,
-    }).then(
-    message => alert('Gracias por tu mail, estaremos en contacto a la brevedad'));
-    form.reset();
-    }
-
-    form.addEventListener('submit',sendMsg);
-</script>
 </html>
